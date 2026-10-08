@@ -180,5 +180,6 @@ func (c *Config) Transport() *http.Transport {
 		IdleConnTimeout:     90 * time.Second,
 		TLSHandshakeTimeout: 10 * time.Second,
 		ForceAttemptHTTP2:   false, // HTTP/1.1, mirroring Node http.Agent
+		Proxy:               http.ProxyFromEnvironment,
 	}
 }
